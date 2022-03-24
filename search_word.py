@@ -7,6 +7,6 @@ def search_word(word):
         if word == word_token[:len(word)]:
             list_word.append(word_token)
         
-        if len(list_word) >= 3: # 3 option
+        if len(list_word) >= 4: # 4 option
             break
     return list_word
