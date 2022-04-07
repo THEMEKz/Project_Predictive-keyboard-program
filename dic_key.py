@@ -214,7 +214,7 @@ key_string_2 = {
     "KeyboardEvent(f12 down)" : ""
 }
 
-key_func = ["KeyboardEvent(A down)",
+reset_key = ["KeyboardEvent(A down)",
             "KeyboardEvent(B down)",
             "KeyboardEvent(C down)",
             "KeyboardEvent(D down)",

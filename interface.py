@@ -7,19 +7,24 @@ def interface_predic(word_):
 
     root = Tk()
 
+    # on front
     root.lift()
     root.attributes('-topmost',True)
     root.after_idle(root.attributes,'-topmost',False)
-
-    root.iconify()
+    # root.iconify()
     root.update()
     root.deiconify()
 
+    # set TK on center
+    windowWidth = root.winfo_reqwidth()
+    positionRight = int(root.winfo_screenwidth()/2 - windowWidth/2)
+    root.geometry("+{}+{}".format(positionRight, 100))
+
     root.overrideredirect(True)
-    root.geometry('+860+80')
-    Font_style = font.Font(size=16)
 
     root.bind("<Escape>", close_window)
+
+    Font_style = font.Font(size=16)
 
     num = 0
     button_dict = {}
@@ -30,13 +35,6 @@ def interface_predic(word_):
         root.bind(str(num),close_window)
         button_dict[lang].pack(side = LEFT,ipadx=30,ipady=10)
 
-    # A = Label(root,text=lang,bg="#24292e",fg="white")
-
-    # l1 = Label(root,text=word_[0])
-    # l1['font'] = Font_style
-    # root.bind("1",close_window)
-    # l1.pack(side = LEFT,ipadx=30,ipady=10)
-
     root.mainloop()
 
 def interface_text(text_):
@@ -46,6 +44,9 @@ def interface_text(text_):
     root = Tk()
     root.overrideredirect(True)
     root.geometry('+860+80')
+
+    root.lift()
+    root.update()
 
     Font_style = font.Font(size=16)
 
